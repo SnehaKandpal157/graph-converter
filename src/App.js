@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Chart from "./components/Chart";
 import pptxgen from "pptxgenjs";
+import { ChartData, Color } from "./Constant";
 
 function App() {
   const [showDonut, setShowDonut] = useState(false)
@@ -14,21 +15,26 @@ function App() {
   const createPPT = () => {
     let pptx = new pptxgen();
     let slide = pptx.addSlide();
+    const chartOptions = {
+      x: 1.5,
+      y: 1,
+      w: 7,
+      h: 4,
+      chartColors: Color,
+      title: "Fruits",
+      lineSize: 3,
+      barGapWidthPct: 35,
+    };
 
-    let dataChartAreaLine = [
-      {
-        name: "Actual Sales",
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        values: [1500, 4600, 5156, 3167, 8510, 8009, 6006, 7855, 12102, 12789, 10123, 15121],
-      }
-    ];
+    slide.addChart(
+      showDonut ? pptx.ChartType.doughnut : pptx.ChartType.bar, ChartData, chartOptions);
 
-    slide.addChart(pptx.ChartType.bar, dataChartAreaLine);
+    pptx.writeFile('PptxGenJs-Basic-Slide-Demo');
   }
 
   return (
     <div className="App">
-      <Header handleCreatePPT={createPPT}/>
+      <Header handleCreatePPT={createPPT} />
       <div className="content-wrap">
         <Sidebar toggleChart={toggleChart} />
         <Chart showDonut={showDonut} />

@@ -6,4 +6,6 @@ export const ChartData = [
   }
 ]
 
-export const Color=['#B21F00','#C9DE00','#2FDE00','#00A6B4','#6800B4']
+export const Color = ['B21F00', 'C9DE00', '2FDE00', '00A6B4', '6800B4']
+
+export const GraphColor = ['#B21F00', '#C9DE00', '#2FDE00', '#00A6B4', '#6800B4']
