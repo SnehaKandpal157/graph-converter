@@ -24,6 +24,7 @@ function App() {
       title: "Fruits",
       lineSize: 3,
       barGapWidthPct: 35,
+      showLegend: true,
     };
 
     slide.addChart(
