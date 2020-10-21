@@ -4,7 +4,7 @@ import Collapsible from 'react-collapsible';
 function Sidebar({ toggleChart }) {
   return (
     <div className="collapsible-wrap">
-      <Collapsible trigger="Chart Selector">
+      <Collapsible trigger="Chart Selector" open={true}>
         <span className="collapsible-content" onClick={() => toggleChart(false)}>Vertical Bar Chart</span>
         <span className="collapsible-content" onClick={() => toggleChart(true)}>Donut Chart</span>
       </Collapsible>

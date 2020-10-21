@@ -13,23 +13,24 @@ function App() {
   }
 
   const createPPT = () => {
-    let pptx = new pptxgen();
-    let slide = pptx.addSlide();
-    const chartOptions = {
-      x: 1.5,
-      y: 1,
-      w: 7,
-      h: 4,
-      chartColors: Color,
-      title: "Fruits",
-      lineSize: 3,
-      barGapWidthPct: 35,
-    };
+    // let pptx = new pptxgen();
+    // let slide = pptx.addSlide();
+    // const chartOptions = {
+    //   x: 1.5,
+    //   y: 1,
+    //   w: 7,
+    //   h: 4,
+    //   chartColors: Color,
+    //   title: "Fruits",
+    //   lineSize: 3,
+    //   barGapWidthPct: 35,
+    //   showLegend: true,
+    // };
 
-    slide.addChart(
-      showDonut ? pptx.ChartType.doughnut : pptx.ChartType.bar, ChartData, chartOptions);
+    // slide.addChart(
+    //   showDonut ? pptx.ChartType.doughnut : pptx.ChartType.bar, ChartData, chartOptions);
 
-    pptx.writeFile('PptxGenJs-Basic-Slide-Demo');
+    // pptx.writeFile('PptxGenJs-Basic-Slide-Demo');
   }
 
   return (
