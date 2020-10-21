@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.logo-image{
+  height:75px;
+  width: 75px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-outer-wrap{
+  padding: 10px 35px;
+  background: #121111;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-inner-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.export-button{
+  padding: 10px;
+  background-color: #4075ec;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.collapsible-wrap{
+  height: 530px;
+  width: 20%;
+  margin-left: 15px;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+}
+
+.Collapsible__contentInner{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 10px;
+}
+
+.collapsible-content{
+  padding: 14px 5px;
+  background: lightgrey;
+  margin-bottom: 10px;
+}
+
+.chart-wrap {
+  width: 80%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.content-wrap{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+canvas.chartjs-render-monitor{
+  width: 700px !important;
+  height: 350px !important;
 }
