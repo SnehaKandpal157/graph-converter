@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Chart from "./components/Chart";
 import pptxgen from "pptxgenjs";
-import { ChartData, Color } from "./Constant";
+import { ChartData, ChartOptions } from "./Constant";
 
 function App() {
   const [showDonut, setShowDonut] = useState(false)
@@ -15,24 +15,10 @@ function App() {
   const createPPT = () => {
     let pptx = new pptxgen();
     let slide = pptx.addSlide();
-    const chartOptions = {
-      x: 1.5,
-      y: 1,
-      w: 7,
-      h: 4,
-      chartColors: Color,
-      title: "Fruits",
-      lineSize: 3,
-      barGapWidthPct: 35,
-      showLegend: true,
-      showTitle: true,
-      legendPos: "b",
-      titleFontSize:18,
-      valAxisLineShow:true
-    };
+    const chartType = showDonut ? pptx.ChartType.doughnut : pptx.ChartType.bar;
 
     slide.addChart(
-      showDonut ? pptx.ChartType.doughnut : pptx.ChartType.bar, ChartData, chartOptions);
+      chartType, ChartData, ChartOptions);
 
     pptx.writeFile('Graph-PPT');
   }
