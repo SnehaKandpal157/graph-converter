@@ -51,8 +51,6 @@
   background: #e3e0e0;
   margin-bottom: 10px;
   font-size: 15px;
-  text-decoration: none;
-  color: black;
 }
 
 .chart-wrap {
@@ -104,3 +102,7 @@ canvas.chartjs-render-monitor{
 }
 
 
+.collapsible-content a{
+  text-decoration: none;
+  color: black;
+}

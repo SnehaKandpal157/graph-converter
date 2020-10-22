@@ -8,8 +8,8 @@ function Sidebar({ toggleChart }) {
   return (
     <div className="collapsible-wrap">
       <Collapsible trigger="Chart Selector" open={true}>
-      <Link to="/vertical-bar-chart" className="collapsible-content"><span  onClick={() => toggleChart(false)}>Vertical Bar Chart</span></Link>
-      <Link to="/donut-chart" className="collapsible-content"> <span  onClick={() => toggleChart(true)}>Donut Chart</span></Link>
+      <span className="collapsible-content"><Link to="/vertical-bar-chart" onClick={() => toggleChart(false)}>Vertical Bar Chart</Link></span>
+       <span className="collapsible-content"><Link to="/donut-chart" onClick={() => toggleChart(true)}>Donut Chart</Link></span>
       </Collapsible>
     </div>
   )
