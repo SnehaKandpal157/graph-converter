@@ -13,7 +13,7 @@ export const GraphColor = ['#B21F00', '#C9DE00', '#2FDE00', '#00A6B4', '#6800B4'
 export const ChartOptions= {
   x: 1.5,
   y: 1,
-  w: 7,
+  w: 7.5,
   h: 4,
   chartColors: Color,
   title: "Fruits",
@@ -22,12 +22,13 @@ export const ChartOptions= {
   showLegend: true,
   showTitle: true,
   legendPos: "b",
-  titleFontSize:14,
-  titleColor:"666666",
+  titleFontSize:13,
+  titleColor:"59595c",
   valAxisLineShow:true,
   dataLabelColor:"666666",
   catGridLine:"solid",
   valGridLine:"solid",
   valAxisLabelColor:"666666",
   catAxisLabelColor:"666666",
+  showPercent:false
 };

@@ -26,10 +26,11 @@ const barChart = (
         display: true,
         position: 'bottom',
         fontSize: 25,
-        fontColor: "#000000",
+        fontColor: "#00000",
         labels: {
-          fontSize: 16,
-          boxWidth: 14,
+          fontSize: 18,
+          boxWidth: 18,
+          fontColor: "#000000",
           generateLabels: function (chart) {
             var labels = chart.data.labels;
             var dataset = chart.data.datasets[0];
@@ -52,11 +53,17 @@ const barChart = (
             beginAtZero: true,
             fontSize: 25,
             max: 35,
+          },
+          gridLines: {
+            color: "#817e7d",
           }
         }],
         xAxes: [{
           ticks: {
             fontSize: 25,
+          },
+          gridLines: {
+            color: "#817e7d"
           }
         }]
       }
