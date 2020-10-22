@@ -25,12 +25,16 @@ function App() {
       lineSize: 3,
       barGapWidthPct: 35,
       showLegend: true,
+      showTitle: true,
+      legendPos: "b",
+      titleFontSize:18,
+      valAxisLineShow:true
     };
 
     slide.addChart(
       showDonut ? pptx.ChartType.doughnut : pptx.ChartType.bar, ChartData, chartOptions);
 
-    pptx.writeFile('PptxGenJs-Basic-Slide-Demo');
+    pptx.writeFile('Graph-PPT');
   }
 
   return (
