@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Chart from "./components/Chart";
 import pptxgen from "pptxgenjs";
 import { ChartData, ChartOptions } from "./Constant";
+import { BrowserRouter as Router} from "react-router-dom";
 
 function App() {
   const [showDonut, setShowDonut] = useState(false)
@@ -25,11 +26,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header handleCreatePPT={createPPT} />
-      <div className="content-wrap">
-        <Sidebar toggleChart={toggleChart} />
-        <Chart showDonut={showDonut} />
-      </div>
+      <Router>
+        <Header handleCreatePPT={createPPT} />
+        <div className="content-wrap">
+          <Sidebar toggleChart={toggleChart} />
+          <Chart showDonut={showDonut} />
+        </div>
+      </Router>
     </div>
   );
 }
